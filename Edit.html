@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs website</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+</head>
+
+<body>
+    <header>
+        <img src="img/Home-Page.jpg" alt="" width="175px" height="175px">
+    </header>
+    <nav>
+        <ul>
+            <a href="Home.html">Home</a>&nbsp;&nbsp;
+            <a href="Add.html">Add</a>&nbsp;&nbsp;
+            <a href="Edit.html">Edit</a>&nbsp;&nbsp;
+            <a href="index.html">Information</a>&nbsp;&nbsp;
+            <a href="index.html">Search</a>&nbsp;&nbsp;
+            <a href="index.html">Assignments</a>&nbsp;&nbsp;
+            <a href="Help.html">Help</a>
+        </ul>
+    </nav>
+    <hr>
+    <section>
+        <h1><u>Edit Student Data</u></h1>
+        <form action="" method="post">
+            <div>
+                <label for="id">Student ID</label>
+                <br>
+                <input id="id" type="tel" required value="20210587" name="id" placeholder="ID">
+            </div>
+            <br>
+            <div>
+                <label for="name">Student Name</label>
+                <br>
+                <input id="name" type="text" required value="moaz alaa" name="name" placeholder="Name">
+            </div>
+            <br>
+            <div>
+                <label for="mail">Email Address</label>
+                <br>
+                <input id="mail" type="email" required value="moaz@gmail.com" name="email" placeholder="Email">
+            </div>
+            <br>
+            <div>
+                <label for="Phone">Mobile Number</label>
+                <br>
+                <input id="Phone" type="tel" required value="01090965111" name="Phone" placeholder="Number">
+            </div>
+            <br>
+            <div>
+                <label for="Dept">Department</label>
+                <br>
+                <input id="Dept" type="text" value="IS" name="Dept" disabled>
+            </div>
+            <br>
+            <div>
+                <label for="gpa">GPA</label>
+                <br>
+                <input id="gpa" type="number" value="3.0" name="GPA" placeholder="GPA" min="0" max="4" step="0.1">
+            </div>
+            <br>
+            <div>
+                <label for="date">Date of Birth</label>
+                <br>
+                <input id="date" type="date" value="2002-12-18" name="Date">
+            </div>
+            <br>
+            <div>
+                <label for="lev">Level</label>
+                <br>
+                <select name="Level" id="lev">
+                    <option value="1">First Level</option>
+                    <option value="2" selected>Second Level</option>
+                    <option value="3">Third Level</option>
+                    <option value="4">Fourth Level</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Gender</label>
+                <br>
+                <input type="radio" value="Male" name="Gender" id="M" checked>
+                <label for="M">Male</label>
+                <input type="radio" value="Female" name="Gender" id="F">
+                <label for="F">Female</label>
+            </div>
+            <br>
+            <div>
+                <label>State</label>
+                <br>
+                <input type="radio" value="Active" name="State" id="A" checked>
+                <label for="A">Active</label>
+                <input type="radio" value="Inactive" name="State" id="I">
+                <label for="I">Inactive</label>
+            </div>
+            <br>
+            <input type="reset">
+            <input type="submit" value="Save">
+            <input type="button" value="Delete" title="To Delete All Data">
+        </form>
+    </section>
+
+</body>
+
+</html>

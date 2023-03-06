@@ -10,18 +10,17 @@
         </header>
         <br>
         <nav>
-            <h3>
                 <ul>
-                    <a href="Home.html" target="_blank">Home</a>&nbsp;&nbsp;
-                    <a href="Add.html" target="_blank">Add</a>&nbsp;&nbsp;
-                    <a href="Edit.html" target="_blank">Edit</a>&nbsp;&nbsp;
-                    <a href="index.html" target="_blank">Information</a>&nbsp;&nbsp;
-                    <a href="Search.html" target="_blank">Search</a>&nbsp;&nbsp;
-                    <a href="StuDepartment.html" target="_blank">Assignments</a>&nbsp;&nbsp;
-                    <a href="Help.html" target="_blank">Help</a>
+                    <a href="Home.html" >Home</a>&nbsp;&nbsp;
+                    <a href="Add.html" >Add</a>&nbsp;&nbsp;
+                    <a href="Edit.html" >Edit</a>&nbsp;&nbsp;
+                    <a href="index.html" >Information</a>&nbsp;&nbsp;
+                    <a href="index.html" >Search</a>&nbsp;&nbsp;
+                    <a href="index.html" >Assignments</a>&nbsp;&nbsp;
+                    <a href="Help.html" >Help</a>
                 </ul>
-            </h3>
         </nav>
+        <hr>
         <h1>Add Student <img src="img/Add_stud.png" alt width="30" height="30"></h1>
         <form >
             <div>
@@ -47,11 +46,20 @@
             <div>
                 <label>Department</label>
                 <select>
-                    <option value="1">CS</option>
-                    <option value="2">IT</option>
-                    <option value="3">DS</option>
-                    <option value="4">IS</option>
-                    <option value="5">AI</option>
+                    <optgroup label="General Program">
+                    <option value="1">Computer Science</option>
+                    <option value="2">Decision Support</option>
+                    <option value="3">Information Technology</option>
+                    <option value="4">Information System</option>
+                    <option value="5">Artifitial Technology</option>
+                </optgroup>
+                    <optgroup label="Special Program">
+                    <option value="6">Bioinformatics</option>
+                    <option value="7">Network Technology</option>
+                    <option value="8">Software Engineering</option>
+                    <option value="9">Cyper Security</option>
+                    <option value="10">Data science</option>
+                </optgroup>
                 </select>
             </div>
             <br>

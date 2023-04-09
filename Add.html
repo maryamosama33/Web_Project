@@ -1,115 +1,116 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Add Student</title>
-    </head>
-    <body>
-        <header>
-            <img src="img/Home-Page.jpg" alt width="175px" height="175px">
-        </header>
-        <br>
-        <nav>
-                <ul>
-                    <a href="Home.html" >Home</a>&nbsp;&nbsp;
-                    <a href="Add.html" >Add</a>&nbsp;&nbsp;
-                    <a href="Edit.html" >Edit</a>&nbsp;&nbsp;
-                    <a href="index.html" >Information</a>&nbsp;&nbsp;
-                    <a href="Search.html" >Search</a>&nbsp;&nbsp;
-                    <a href="index.html" >Assignments</a>&nbsp;&nbsp;
-                    <a href="Help.html" >Help</a>
-                </ul>
-        </nav>
-        <hr>
-        <h1>Add Student <img src="img/Add_stud.png" alt width="30" height="30"></h1>
-        <form >
-            <div>
-                <label>Name</label>
-                <input type="text" required placeholder="Student Name">
-            </div>
-            <br>
-            <div>
-                <label>ID</label>
-                <input type="text" required placeholder="Student ID">
-            </div>
-            <br>
-            <div>
-                <label>Level</label>
-                <select>
-                    <option value="1">Level 1</option>
-                    <option value="2">Level 2</option>
-                    <option value="3">Level 3</option>
-                    <option value="4">Level 4</option>
-                </select>
-            </div>
-            <br>
-            <div>
-                <label>Department</label>
-                <select>
-                    <optgroup label="General Program">
-                    <option value="1">Computer Science</option>
-                    <option value="2">Decision Support</option>
-                    <option value="3">Information Technology</option>
-                    <option value="4">Information System</option>
-                    <option value="5">Artifitial Technology</option>
-                </optgroup>
-                    <optgroup label="Special Program">
-                    <option value="6">Bioinformatics</option>
-                    <option value="7">Network Technology</option>
-                    <option value="8">Software Engineering</option>
-                    <option value="9">Cyper Security</option>
-                    <option value="10">Data science</option>
-                </optgroup>
-                </select>
-            </div>
-            <br>
-            <div>
-                <label>GPA</label>
-                <input type="text" required pattern="[0-9]+(\.[0-9]{1,2})?">
-            </div>
-            <br>
-            <div>
-                <label>Email</label>
-                <input type="email" required placeholder="email" pattern="[a-z0-9._%+-]+@gmail\.com$">
-            </div>
-            <br>
-            <div>
-                <label>Phone no.</label>
-                <input type="tel" placeholder="Phone number">
-            </div>
-            <br>
-            <div>
-                <label>Address</label>
-                <input type="text" placeholder="address optional">
-            </div>
-            <br>
-            <div>
-                <label>Date of Birth</label>
-                <input type="date" required>
-            </div>
-            <br>
-            <div>
-                <label>Gender</label>
-                <select>
-                    <option value="1">Male</option>
-                    <option value="2">female</option>
-                </select>
-            </div>
-            <br>
-            <div>
-                <label>Status</label>
-                <input type="radio">
-                <label>Active</label>
-                <input type="radio">
-                <label>Inactive</label>
-            </div>
-            <div>
-                <input type="submit" value="Save">
-            </div>
-        </form>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Student</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/Home-Page.jpg" alt="" width="220px" height="200px">
+    </header>
     <br>
-    <footer>
-        <a href="https://newcome.fci.cu.edu.eg">Contact Us</a>
-    </footer>
+    <nav>
+        <ul>
+            <a href="Home.html">Home</a>&nbsp;&nbsp;
+            <a href="Add.html">Add</a>&nbsp;&nbsp;
+            <a href="Edit.html">Edit</a>&nbsp;&nbsp;
+            <a href="Information.html">Information</a>&nbsp;&nbsp;
+            <a href="Search.html">Search</a>&nbsp;&nbsp;
+            <a href="StuDepartment.html">Student's Department Assignment</a>&nbsp;&nbsp;
+            <a href="Help.html">Help</a>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Add Student <img src="img/Add_stud.png" alt width="30" height="30"></h1>
+    <form method="post">
+        <div>
+            <label>Name</label>
+            <input type="text" required placeholder="Student Name" name="Name">
+        </div>
+        <br>
+        <div>
+            <label>ID</label>
+            <input type="text" required placeholder="Student ID" name="ID">
+        </div>
+        <br>
+        <div>
+            <label>Level</label>
+            <select name="Level">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Department</label>
+            <select name="Dept">
+                <optgroup label="General Program">
+                    <option value="CS">Computer Science</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="IS">Information System</option>
+                    <option value="AI">Artifitial Intelligence</option>
+                </optgroup>
+                <optgroup label="Special Program">
+                    <option value="Bioinformatics">Bioinformatics</option>
+                    <option value="Network Technology">Network Technology</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Cyper Security">Cyper Security</option>
+                    <option value="Data science">Data science</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>GPA</label>
+            <input type="number" required min="0" max="4" step="0.1" placeholder="GPA" name="GPA">
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" required placeholder="email" name="Email">
+        </div>
+        <br>
+        <div>
+            <label>Phone no.</label>
+            <input type="tel" placeholder="Phone number" name="Phone">
+        </div>
+        <br>
+        <div>
+            <label>Address</label>
+            <input type="text" placeholder="address optional" name="Address">
+        </div>
+        <br>
+        <div>
+            <label>Date of Birth</label>
+            <input type="date" required name="Date">
+        </div>
+        <br>
+        <div>
+            <label>Gender</label>
+            <select name="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">female</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Status</label>
+            <input type="radio" name="Status" value="Active">
+            <label>Active</label>
+            <input type="radio" name="Status" value="Inactive">
+            <label>Inactive</label>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</body>
+<br>
+
 </html>

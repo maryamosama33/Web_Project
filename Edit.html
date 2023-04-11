@@ -1,108 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <title>Student Affairs website</title>
+    <title>Student Affairs</title>
     <meta name="description" content="This website can help you easily manage students information.">
-</head>
-
-<body>
+    <link rel="stylesheet" href="Edit.css">
+  </head>
+  <body>
     <header>
-        <img src="img/Home-Page.jpg" alt="" width="220px" height="200px">
+       <img src="img/Home-Page2.jpg" alt="" width="220px" height="150px">
+       <h1>Student Affairs</h1>
+       
     </header>
     <nav>
-        <ul>
-            <a href="Home.html">Home</a>&nbsp;&nbsp;
-            <a href="Add.html">Add</a>&nbsp;&nbsp;
-            <a href="Edit.html">Edit</a>&nbsp;&nbsp;
-            <a href="Information.html">Information</a>&nbsp;&nbsp;
-            <a href="Search.html">Search</a>&nbsp;&nbsp;
-            <a href="StuDepartment.html">Student's Department Assignment</a>&nbsp;&nbsp;
-            <a href="Help.html">Help</a>
-        </ul>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Add.html">Add</a></li>
+        <li><a href="Information.html">Information</a></li>
+        <li><a href="Search.html">Search</a></li>
+        <li><a href="StuDepartment.html">Department Assignment</a></li>
+        <li><a href="Help.html">Help</a></li>
+      </ul>
     </nav>
-    <hr>
     <section>
-        <h1><u>Edit Student Data</u></h1>
-        <form action="" method="post">
-            <div>
-                <label for="id">Student ID</label>
-                <br>
-                <input id="id" type="tel" required value="20210587" name="id" placeholder="ID">
-            </div>
-            <br>
-            <div>
-                <label for="name">Student Name</label>
-                <br>
-                <input id="name" type="text" required value="moaz alaa" name="name" placeholder="Name">
-            </div>
-            <br>
-            <div>
-                <label for="mail">Email Address</label>
-                <br>
-                <input id="mail" type="email" required value="moaz@gmail.com" name="email" placeholder="Email">
-            </div>
-            <br>
-            <div>
-                <label for="Phone">Mobile Number</label>
-                <br>
-                <input id="Phone" type="tel" required value="01090965111" name="Phone" placeholder="Number">
-            </div>
-            <br>
-            <div>
-                <label for="Dept">Department</label>
-                <br>
-                <input id="Dept" type="text" value="IS" name="Dept" disabled>
-            </div>
-            <br>
-            <div>
-                <label for="gpa">GPA</label>
-                <br>
-                <input id="gpa" type="number" value="3.0" name="GPA" placeholder="GPA" min="0" max="4" step="0.1">
-            </div>
-            <br>
-            <div>
-                <label for="date">Date of Birth</label>
-                <br>
-                <input id="date" type="date" value="2002-12-18" name="Date">
-            </div>
-            <br>
-            <div>
-                <label for="lev">Level</label>
-                <br>
-                <select name="Level" id="lev">
-                    <option value="1">First Level</option>
-                    <option value="2" selected>Second Level</option>
-                    <option value="3">Third Level</option>
-                    <option value="4">Fourth Level</option>
-                </select>
-            </div>
-            <br>
-            <div>
-                <label>Gender</label>
-                <br>
-                <input type="radio" value="Male" name="Gender" id="M" checked>
-                <label for="M">Male</label>
-                <input type="radio" value="Female" name="Gender" id="F">
-                <label for="F">Female</label>
-            </div>
-            <br>
-            <div>
-                <label>State</label>
-                <br>
-                <input type="radio" value="Active" name="State" id="A" checked>
-                <label for="A">Active</label>
-                <input type="radio" value="Inactive" name="State" id="I">
-                <label for="I">Inactive</label>
-            </div>
-            <br>
-            <input type="reset">
-            <input type="submit" value="Save">
-            <input type="button" value="Delete" title="To Delete All Data">
-        </form>
-    </section>
-
-</body>
-
+        <div class="container">
+           <div class="title">Edit</div>
+           <div class="content">
+             <form action="" method="post">
+               <div class="user-details">
+                 <div class="input-box">
+                   <span class="details">Student Name</span>
+                   <input type="text" required value="moaz alaa" placeholder="Enter Your Name">
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Student ID</span>
+                   <input type="tel" required value="20210587"  placeholder="Enter Your ID">
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Email</span>
+                   <input type="email" required value="moaz@gmail.com" placeholder="Enter Your Email">
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Phone Number</span>
+                   <input type="tel" required value="01090965111" placeholder="Enter Your Number">
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Department</span>
+                   <input type="text" value="IS" disabled>
+                 </div>
+                 <div class="input-box">
+                   <span class="details">GPA</span>
+                   <input type="number" value="3.0"  placeholder="Enter Your GPA" min="0" max="4" step="0.1">
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Date of Birth</span>
+                   <input type="date" value="2002-12-18" >
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Level</span>
+                   <select class="Level">
+                     <option value="1">First Level</option>
+                     <option value="2" selected>Second Level</option>
+                     <option value="3">Third Level</option>
+                     <option value="4">Fourth Level</option>
+                 </select>
+                 </div>
+               </div>
+               <div class="gender-details">
+                 <input type="radio" name="gender" id="dot-1" checked>
+                 <input type="radio" name="gender" id="dot-2">
+                 <span class="gender-title">Gender</span>
+                 <div class="category">
+                   <label for="dot-1">
+                   <span class="dot one"></span>
+                   <span class="gender">Male</span>
+                 </label>
+                 <label for="dot-2">
+                   <span class="dot two"></span>
+                   <span class="gender">Female</span>
+                 </label>
+                 </div>
+               </div>
+               <div class="state-details">
+                 <input type="radio" name="state" id="st-1" checked>
+                 <input type="radio" name="state" id="st-2">
+                 <span class="state-title">State</span>
+                 <div class="category">
+                   <label for="st-1">
+                   <span class="st one"></span>
+                   <span class="state">Active </span>
+                 </label>
+                 <label for="st-2">
+                   <span class="st two"></span>
+                   <span class="state">Inactive</span>
+                 </label>
+                 </div>
+               </div>
+               <div class="button">
+                 <input type="submit" value="Edit">
+               </div>
+             </form>
+           </div>
+        </div>
+       </section>
+    <footer>
+      <p>&copy; 2023 Student Affairs</p>
+    </footer>
+  </body>
 </html>

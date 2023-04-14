@@ -8,10 +8,9 @@
   </head>
   <body>
     <header>
-       <img src="img/Home-Page2.jpg" alt="" width="220px" height="150px">
-       <h1>Student Affairs</h1>
-       
-    </header>
+      <img src="img/Home-Page.jpg" alt="" class="logo">
+      <h1 class="page-name">Student Affairs</h1>
+   </header>
     <nav>
       <ul>
         <li><a href="Home.html">Home</a></li>
@@ -29,35 +28,35 @@
              <form action="" method="post">
                <div class="user-details">
                  <div class="input-box">
-                   <span class="details">Student Name</span>
-                   <input type="text" required value="moaz alaa" placeholder="Enter Your Name">
+                   <label class="details">Student Name</label>
+                   <input type="text" required value="moaz alaa" placeholder="Enter Your Name" id="name">
                  </div>
                  <div class="input-box">
-                   <span class="details">Student ID</span>
-                   <input type="tel" required value="20210587"  placeholder="Enter Your ID">
+                   <label class="details">Student ID</label>
+                   <input type="tel" required value="20210587"  placeholder="Enter Your ID" id="id">
                  </div>
                  <div class="input-box">
-                   <span class="details">Email</span>
-                   <input type="email" required value="moaz@gmail.com" placeholder="Enter Your Email">
+                   <label class="details">Email</label>
+                   <input type="email" required value="moaz@gmail.com" placeholder="Enter Your Email" id="email">
                  </div>
                  <div class="input-box">
-                   <span class="details">Phone Number</span>
-                   <input type="tel" required value="01090965111" placeholder="Enter Your Number">
+                   <label class="details">Phone Number</label>
+                   <input type="tel" required value="01090965111" placeholder="Enter Your Number" id="phone">
                  </div>
                  <div class="input-box">
-                   <span class="details">Department</span>
-                   <input type="text" value="IS" disabled>
+                   <label class="details">Department</label>
+                   <input type="text" value="IS" disabled id="DP">
                  </div>
                  <div class="input-box">
-                   <span class="details">GPA</span>
-                   <input type="number" value="3.0"  placeholder="Enter Your GPA" min="0" max="4" step="0.1">
+                   <label class="details">GPA</label>
+                   <input type="number" value="3.0"  placeholder="Enter Your GPA" min="0" max="4" step="0.1" id="GPA">
                  </div>
                  <div class="input-box">
-                   <span class="details">Date of Birth</span>
-                   <input type="date" value="2002-12-18" >
+                   <label class="details">Date of Birth</label>
+                   <input type="date" value="2002-12-18" id="date">
                  </div>
                  <div class="input-box">
-                   <span class="details">Level</span>
+                   <label class="details">Level</label>
                    <select class="Level">
                      <option value="1">First Level</option>
                      <option value="2" selected>Second Level</option>
@@ -69,7 +68,7 @@
                <div class="gender-details">
                  <input type="radio" name="gender" id="dot-1" checked>
                  <input type="radio" name="gender" id="dot-2">
-                 <span class="gender-title">Gender</span>
+                 <label class="gender-title">Gender</label>
                  <div class="category">
                    <label for="dot-1">
                    <span class="dot one"></span>
@@ -83,7 +82,7 @@
                </div>
                <div class="state-details">
                  <input type="radio" name="state" id="st-1" checked>
-                 <input type="radio" name="state" id="st-2">
+                 <input  type="radio" name="state" id="st-2">
                  <span class="state-title">State</span>
                  <div class="category">
                    <label for="st-1">
@@ -96,8 +95,8 @@
                  </label>
                  </div>
                </div>
-               <div class="button">
-                 <input type="submit" value="Edit">
+               <div class="button-cont">
+                 <button class="button" type="submit" value="Edit" onclick="changeValue()" >Edit</button>
                </div>
              </form>
            </div>
@@ -106,5 +105,6 @@
     <footer>
       <p>&copy; 2023 Student Affairs</p>
     </footer>
+    <script src="Edit.js"></script>
   </body>
 </html>

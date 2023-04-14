@@ -11,14 +11,21 @@ body {
     color: #333; 
   }
   header {
-    margin-top: -20px;
-    height: 150px;
+    margin-top: 0px;
+    height: 100px;
+    position: relative;
   }
-  h1 {
+  .page-name {
     color:  #005BEA ;
-    bottom: 525px;
-    left: 165px;
+    top: 38px;
+    left: 112px;
     position: absolute;
+    font-size: 28px;
+  
+  }
+  .logo {
+    width: 150px;
+    height: 100px;
   }
   
   nav {
@@ -28,6 +35,10 @@ body {
     justify-content:right;
     align-items: center;
     padding: 10px 20px 10px 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    position: sticky;
+    top: 0px;
   }
   
   nav ul {
@@ -38,7 +49,7 @@ body {
     color: #F9F9F9; 
     text-decoration: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: all 0.3s ease;
   }
   
@@ -49,7 +60,6 @@ body {
   section{
     height: 100%;
     display: grid;
-    position: relative;
     justify-content: center;
     align-items: center;
     padding: 30px;
@@ -66,13 +76,12 @@ body {
   .container .title{
     font-size: 25px;
     font-weight: 500;
-    position: relative;
   }
   .container .title::before{
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 318px;
+    bottom: 400px;
     height: 3px;
     width: 30px;
     border-radius: 5px;
@@ -88,7 +97,7 @@ body {
     margin-bottom: 15px;
     width: calc(100% / 2 - 20px);
   }
-  form .input-box span.details{
+  form .input-box label.details{
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
@@ -175,11 +184,11 @@ body {
    form input[type="radio"]{
      display: none;
    }
-   form .button{
+   form .button-cont{
      height: 45px;
      margin: 35px 0
    }
-   form .button input{
+   form .button {
      height: 100%;
      width: 100%;
      border-radius: 5px;

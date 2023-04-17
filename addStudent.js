@@ -1,35 +1,38 @@
-let ArrayOfStudents = JSON.parse(localStorage.getItem('ArrayOfStudents'));
+let ArrayOfStudents = JSON.parse(localStorage.getItem('ArrayOfStudents')) || [];
+
 function store(){
-    var form=document.getElementsByName("form");
-    const Name = document.getElementsByName("name").value;
-    const ID = document.getElementsByName("ID").value;
-    const Level = document.getElementsByName("Level").value;
-    const Department = document.getElementsByName("Department").value;
-    const GPA = document.getElementsByName("GPA").value;
-    const Email = document.getElementsByName("Email").value;
-    const Phone = document.getElementsByName("Phone").value;
-    const Address = document.getElementsByName("Address").value;
-    const BirthDate = document.getElementsByName("BirthDate").value;
-    const Status = document.getElementsByName("Status").value;
-
-    let newObj = {
-        Name,
-        ID,
-        Level,
-        Department,
-        GPA,
-        Email,
-        Phone,
-        Address,
-        BirthDate,
-        Status
-    }
-
+    const name = document.getElementById("name");
+    const ID = document.getElementById("ID");
+    const Level = document.getElementById("Level");
+    const Department = document.getElementById("Department");
+    const GPA = document.getElementById("GPA");
+    const Email = document.getElementById("Email");
+    const Phone = document.getElementById("Phone");
+    const Address = document.getElementById("Address");
+    const BirthDate = document.getElementById("BirthDate");
+    const Gender = document.getElementById("Gender");
+    const Status = document.getElementById("Status");
+    
+    let newObj = {};
+    
+    if (name !== null) newObj.name = name.value;
+    if (ID !== null) newObj.ID = ID.value;
+    if (Level !== null) newObj.level = Level.value;
+    if (Department !== null) newObj.department = Department.value;
+    if (GPA !== null) newObj.GPA = GPA.value;
+    if (Email !== null) newObj.email = Email.value;
+    if (Phone !== null) newObj.phone = Phone.value;
+    if (Address !== null) newObj.address = Address.value;
+    if (BirthDate !== null) newObj.birthDate = BirthDate.value;
+    if (Gender !== null) newObj.Gender = Gender.value;
+    if (Status !== null) newObj.Status = Status.value;
+    
     ArrayOfStudents.push(newObj);
     localStorage.setItem('ArrayOfStudents' , JSON.stringify(ArrayOfStudents));
+
+    return true;
 }
 
-///May have a problem
 document.addEventListener("DOMContentLoaded", function() {
     const myButton = document.getElementById("submit");
     myButton.addEventListener("click", function(e) {

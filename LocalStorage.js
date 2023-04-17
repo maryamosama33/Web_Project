@@ -9,6 +9,7 @@ let student1 = {
     Phone : "01111456252",
     Address : "Al-haram",
     BirthDate : "27/11/2003",
+    Gender : "Female",
     Status : "Active"
 };
 
@@ -22,6 +23,7 @@ let student2 = {
     Phone : "01111456252",
     Address : "El-Maadi",
     BirthDate : "27/11/2004",
+    Gender : "Female",
     Status : "Active"
 };
     localStorage.setItem('ArrayOfStudents', JSON.stringify([student1 , student2]));

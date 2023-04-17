@@ -1,83 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Student Affairs</title>
-        <meta name="description" content="This website can help you easily manage students information.">
-        <link rel="stylesheet" href="StuDepartment.css">
-    </head>
 
-    <body>
-        <header>
-            <img src="img/Home-Page2.jpg" alt="" class="logo">
-            <h1 class="page-name">Student Affairs</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+    <link rel="stylesheet" href="StuDepartment.css">
+</head>
 
-        <nav>
-            <ul>
-                <a href="Home.html">Home</a>&nbsp;&nbsp;
-                <a href="Add.html">Add</a>&nbsp;&nbsp;
-                <a href="Edit.html">Edit</a>&nbsp;&nbsp;
-                <a href="index.html">Information</a>&nbsp;&nbsp;
-                <a href="index.html">Search</a>&nbsp;&nbsp;
-                <a href="StuDepartment.html">Assignments</a>&nbsp;&nbsp;
-                <a href="Help.html">Help</a>
-            </ul>
-        </nav>
+<body>
+    <header>
+        <img src="img/Home-Page2.jpg" alt="" class="logo">
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Add.html">Add</a></li>
+          <li><a href="Information.html">Information</a></li>
+          <li><a href="Search.html">Search</a></li>
+          <li><a href="StuDepartment.html">Department Assignment</a></li>
+          <li><a href="Help.html">Help</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1 class="title">Student Department Assignment</h1>
+    </div>
+    <form>
+        <div>
+            <label>Name</label>
+            <input type="text" required name="Name">
+        </div>
+        <br>
+        <div>
+            <label>ID</label>
+            <input type="text" required name="ID">
+        </div>
+        <br>
+        <div>
+            <label for="department">Department</label>
+            <select name="department" id="department" required>
+                <optgroup label="General Program">
+                    <option value="CS">Computer Science</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="IS">Information System</option>
+                    <option value="AI">Artifitial Intelligence</option>
+                </optgroup>
+                <optgroup label="Special Program">
+                    <option value="Bioinformatics">Bioinformatics</option>
+                    <option value="Network Technology">Network Technology</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Cyper Security">Cyper Security</option>
+                    <option value="Data science">Data science</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <input type="submit">
+    </form>
+    <footer>
+        <p>&copy; 2023 Student Affairs</p>
+      </footer>
+</body>
 
-        <section class="section1">
-            <h1 class="title">
-                Departement Assignment
-            </h1>
-        </section>
-        
-        <section class="section2">
-            <form method="post">
-                <div class="input">
-                    <label>Name</label>
-                    <input type="text" required placeholder="Student Name" name="Name">
-                </div>
-                <br>
-                <div>
-                    <label>ID</label>
-                    <input type="text" required placeholder="Student ID" name="ID">
-                </div>
-                    <br>
-                <div class="input">
-                   <label class="level">Level</label>
-                   <select class="Level" required>
-                        <option value="3" selected>Third Level</option>
-                        <option value="4">Fourth Level</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <label for="department">Department</label>
-                    <select name="department" id="department" required>
-                        <optgroup label="General Program">
-                            <option value="1">Computer Science</option>
-                            <option value="2">Decision Support</option>
-                            <option value="3">Information Technology</option>
-                            <option value="4">Information System</option>
-                            <option value="5">Artificial Intelligence</option>
-                        </optgroup>
-                        <optgroup label="Special Program">
-                            <option value="6">Bioinformatics</option>
-                            <option value="7">Software Engineering</option>
-                            <option value="8">Network Technology</option>
-                            <option value="9">Cyber Security</option>
-                            <option value="10">Data Science</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <br>
-                <section class="button">
-                    <input type="submit">
-                </section>
-            </form>
-        </section> 
-        <footer>
-            <p>&copy; 2023 Student Affairs</p>
-        </footer>
-    </body>
 </html>

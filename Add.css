@@ -136,7 +136,34 @@ input[type="radio"]:checked {
  .act label,.inact label {
     margin-left: 10px;
     margin-top: 10px;
- }
+ }form .button-cont{
+  height: 45px;
+  margin: 35px 0;
+  background: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none; /* optional */
+  border-radius: 5px; /* optional */
+}
+
+form .button-cont button {
+  width: 100%; /* make the button full-width */
+  height: 100%; /* make the button full-height */
+  border: none; /* remove the button border */
+  color: #fff; /* set the text color */
+  font-size: 18px; /* set the font size */
+  font-weight: 500; /* set the font weight */
+  letter-spacing: 1px; /* optional */
+  cursor: pointer; /* set the cursor to pointer */
+  background: none; /* remove the button background */
+}
+
+form .button-cont button:hover{
+  background: linear-gradient(-40deg, #00C6FB 0%, #005BEA 100%);
+}
+
 footer {
     background: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
     color: #F9F9F9; 

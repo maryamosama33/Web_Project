@@ -1,118 +1,115 @@
-function validate_form(){
-    let name = document.getElementById("name");
-    var letters = /^[A-Za-z]+$/;
-    if(!name.value.match(letters) ){
-        alert("Invalid Name:\nName must contain only letters"); 
-        document.getElementById("name").focus();
-        return false;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    var id=document.getElementById("id").value;  
-    if (isNaN(id)){  
-        alert("Invalid ID:\nID must contain only numbers"); 
-        document.getElementById("id").focus();
-        return false;  
-    } 
-    if(id.length != 8){
-        alert("Invalid ID:\nID must be 8 digits long");
-        document.getElementById("id").focus();
-        return false;
-    }
+<head>
+    <meta charset="UTF-8" />
+    <title>Add Student</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+    <link rel="stylesheet" href="Add.css">
+    <script src="LocalStorage.js" ></script>
+    <script src="addStudent.js" ></script>
+</head>
 
-    var university = document.getElementById("university").value;
-    if (university == "") {
-        alert("Please select a university.");
-        document.getElementById("university").focus();
-        return false;
-    }
-
-    var department = document.getElementById("department").value;
-    if (department == "") {
-        alert("Please select a department.");
-        document.getElementById("department").focus();
-        window.scroll(30,30);
-        return false;
-    }
-
-    var course1 = document.getElementById("c1").value;
-    if (course1 == "") {
-        alert("Please select a the first course.");
-        document.getElementById("c1").focus();
-        return false;
-    }
-
-    var course2 = document.getElementById("c2").value;
-    if (course2 == "") {
-        alert("Please select the second course.");
-        document.getElementById("c2").focus();
-        return false;
-    }
-
-    var course3 = document.getElementById("c3").value;
-    if (course3 == "") {
-        alert("Please select the third course.");
-        document.getElementById("c3").focus();
-        return false;
-    }
-
-    var c1 = document.getElementById("c1").value;
-    var c2 = document.getElementById("c2").value;
-    var c3 = document.getElementById("c3").value;
-
-    if (c1 == c2 || c1 == c3 || c2 == c3) {
-        alert("Please select different courses for each option.");
-        return false;
-    }
-    return true;
-}
-
-function storeData() {
-    var form=document.getElementById("form");
-    if(validate_form()){
-        let name = document.getElementById("name").value;
-        let id = document.getElementById("id").value;
-        let dateOfBirth = document.getElementById("DateOfBirth").value;
-        let university = document.getElementById("university").value;
-        let gender = document.querySelector('input[name="gender"]:checked').value;
-        let department = document.getElementById("department").value;
-        let status = document.querySelector('input[name="status"]:checked').value;
-        let course1 = document.getElementById("c1").value;
-        let course2 = document.getElementById("c2").value;
-        let course3 = document.getElementById("c3").value;
-    
-        let data = JSON.parse(localStorage.getItem("data")) || [];
-    
-        let studentData = {
-        name,
-        id,
-        dateOfBirth,
-        university,
-        gender,
-        department,
-        status,
-        course1,
-        course2,
-        course3,
-        };
-    
-        data.push(studentData);
-    
-        localStorage.setItem("data", JSON.stringify(data));
-        return true;
-    }   
-    else{
-        return false;
-    }
-}  
-
-const form = document.getElementById('form');
-
-form.addEventListener('submit', function() {
-
-    location.reload();
-
-});
-
-
-
-  
+<body>
+    <header>
+        <img src="img/Home-Page2.jpg" alt="" class="logo">
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Add.html">Add</a></li>
+          <li><a href="Information.html">Information</a></li>
+          <li><a href="Search.html">Search</a></li>
+          <li><a href="StuDepartment.html">Department Assignment</a></li>
+          <li><a href="Help.html">Help</a></li>
+        </ul>
+      </nav>
+    <h1 class="title">Add Student <img src="img/Add_stud.png" alt width="30" height="30"></h1>
+    <form  id = "form">
+        <div>
+            <label>Name</label>
+            <input type="text" required placeholder="Student Name" id="name">
+        </div>
+        <br>
+        <div>
+            <label>ID</label>
+            <input type="text" required placeholder="Student ID" id="ID">
+        </div>
+        <br>
+        <div>
+            <label>Level</label>
+            <select id="Level">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Department</label>
+            <select id="Department">
+                <option value="None">None</option>
+                <optgroup label="General Program">
+                    <option value="CS">Computer Science</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="IS">Information System</option>
+                    <option value="AI">Artifitial Intelligence</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>GPA</label>
+            <input type="number" required min="0" max="4" step="0.1" placeholder="GPA" id="GPA">
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" required placeholder="email" id="Email">
+        </div>
+        <br>
+        <div>
+            <label>Phone no.</label>
+            <input type="tel" placeholder="Phone number" id="Phone">
+        </div>
+        <br>
+        <div>
+            <label>Address</label>
+            <input type="text" placeholder="address optional" id="Address">
+        </div>
+        <br>
+        <div>
+            <label>Date of Birth</label>
+            <input type="date" required id="BirthDate">
+        </div>
+        <br>
+        <div>
+            <label>Gender</label>
+            <select id="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">female</option>
+            </select>
+        </div>
+        <br>
+        <label>Status</label>
+        <div class="act">
+            <input type="radio"id="act" id="Status" value="Active">
+            <label for="act">Active</label>
+        </div>
+        <div class="inact">
+            <input type="radio"id="inact" id="Status" value="Inactive">
+            <label for="inact">Inactive</label>
+        </div>              
+        <br>
+        <div>
+            <button class = "button-cont" type="submit" value="Save" id = "submit">Save </button>
+        </div>
+    </form>
+    <footer>
+        <p>&copy; 2023 Student Affairs</p>
+    </footer>
+</body>
+</html>

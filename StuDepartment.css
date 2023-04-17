@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+ box-sizing: border-box;
+ font-family: 'Poppins',sans-serif;
+ } 
+body {
+   margin: 0;
+   padding: 0;
+   background-color: white; 
+   color: #333; 
+ }
+ header {
+   margin-top: 0px;
+   height: 100px;
+   position: relative;
+ }
+ .page-name {
+   color:  #005BEA ;
+   top: 38px;
+   left: 112px;
+   position: absolute;
+   font-size: 28px;
+ 
+ }
+ .logo {
+   width: 150px;
+   height: 100px;
+ }
+ 
+ nav {
+   background: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
+   color: #F9F9F9; 
+   display: flex;
+   justify-content:right;
+   align-items: center;
+   padding: 10px 20px 10px 10px;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+   width: 100%;
+   position: sticky;
+   top: 0px;
+ }
+ 
+ nav ul {
+   list-style: none;
+   display: flex;
+ }
+ nav a {
+   color: #F9F9F9; 
+   text-decoration: none;
+   padding: 10px;
+   border-radius: 30px;
+   transition: all 0.3s ease;
+ }
+ 
+ nav a:hover {
+   background-color: #F9F9F9; 
+   color: #0072C6; 
+ }
+ .section1 .title{
+  font-size: 30px;
+  font-weight: 1000; 
+  color: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
+  padding: 10px 10px 10px;
+  justify-content: center;
+  text-align: center;
+ }
+ .section2{
+  display: flex;
+  color: #000000;
+  padding: 20px 20px 20px;
+  justify-content: center;
+  text-align: center;
+ }
+ .section2{
+  max-width: 450px;
+  width: 100%;
+  background-color: #fff;
+  margin: auto ;
+  margin-bottom: 20px;
+  padding: 20px 30px 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.7);
+}
+.button{
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+footer {
+  background: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
+  color: #F9F9F9; 
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0px;
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+ font-family: 'Poppins',sans-serif;
+ } 
+body {
+   margin: 0;
+   padding: 0;
+   background-color: white; 
+   color: #333; 
+ }
+
+header {
+  margin-top: 0px;
+  height: 100px;
+  position: relative;
+}
+.page-name {
+  color:  #005BEA ;
+  top: 38px;
+  left: 112px;
+  position: absolute;
+  font-size: 28px;
+
+}
+.logo {
+  width: 150px;
+  height: 100px;
+}
+nav {
+  background: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
+  color: #F9F9F9; 
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  position: sticky;
+  top: 0px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav a {
+  color: #F9F9F9; 
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #F9F9F9; 
+  color: #0072C6; 
+}
+.h1 {
+  text-align: center;
+}
+section {
+    padding: 5px;
+    margin: 30px 0px;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 2px solid black;
+  width: 100%;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+table th,
+table td {
+  padding: 10px;
+  text-align: center;
+}
+ table th {
+   background-color: #2283f2;
+   color: white;
+ }
+button {
+    color: white;
+    border: none;
+    background-color: #005bead9;
+    border-radius: 20px;
+}
+button:hover {
+    background-color: #000000;
+}
+
+footer {
+  background: linear-gradient(40deg, #00C6FB 0%, #005BEA 100%);
+  color: #F9F9F9;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  margin-top: 25px;
+}
+
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Affairs</title>
+  <meta name="description" content="This website can help you easily manage students information.">
+  <link rel="stylesheet" href="{% static 'studentaffairs_app/CSS/Edit.css' %}">
+</head>
+
+<body>
+  <header>
+    <img src="{% static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class="logo">
+    <h1 class="page-name">Student Affairs</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/add">Add</a></li>
+      <li><a href="/information">Information</a></li>
+      <li><a href="/Search">Search</a></li>
+      <li><a href="/help">Help</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div class="container">
+      <div class="title">Edit</div>
+      <div class="content">
+        <form id="user-form">
+          <div class="user-details">
+            <div class="input-box">
+              <label class="details">Student Name</label>
+              <input type="text" required value="" placeholder="Student Name" id="name" name="name">
+            </div>
+            <div class="input-box">
+              <label class="details">Student ID</label>
+              <input type="tel" readonly value="" placeholder="Student ID" id="id" name="studID">
+            </div>
+            <div class="input-box">
+              <label class="details">Email</label>
+              <input type="email" required value="" placeholder="Student Email" id="email" name="email">
+            </div>
+            <div class="input-box">
+              <label class="details">Phone Number</label>
+              <input type="tel" required value="" placeholder="Student Number" id="phone" name="phone">
+            </div>
+            <div class="input-box">
+              <label class="details">Department</label>
+              <input type="text" readonly id="DP" name="department">
+            </div>
+            <div class="input-box">
+              <label class="details">GPA</label>
+              <input type="number" value="3.0" placeholder="Student GPA" min="0" max="4" step="0.1" id="GPA" name="gpa">
+            </div>
+            <div class="input-box">
+              <label class="details">Date of Birth</label>
+              <input type="date" value="" id="dob" name="dob">
+            </div>
+            <div class="input-box">
+              <label class="details">Level</label>
+              <select id="Level" name="level">
+                <option value="Level 1">Level 1</option>
+                <option value="Level 2">Level 2</option>
+                <option value="Level 3">Level 3</option>
+                <option value="Level 4">Level 4</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label class="details">Gender</label>
+              <select id="Gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label class="details">Status</label>
+              <select id="Status" name="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+          <div class="button-cont">
+            <button class="button" type="submit" id="save-button" value="Edit">Edit</button>
+          </div>
+          <div class="button-del">
+            <button class="button2" type="submit" id="delete-button" value="Delete">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2023 Student Affairs</p>
+  </footer>
+  <script src="{% static 'studentaffairs_app/js/Edit.js' %}"></script>
+
+</body>
+
+</html>

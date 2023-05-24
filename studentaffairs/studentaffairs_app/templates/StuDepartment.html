@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+    <link rel="stylesheet" href="{% static 'studentaffairs_app/CSS/StuDepartment.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{% static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class="logo">
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/help">Help</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1 class="title">Student Department Assignment</h1>
+    </div>
+<form id="dept-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" readonly><br><br>
+
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="ID" readonly><br><br>
+
+    <label for="department">Department:</label>
+    <select id="department" name="Department">
+        <optgroup label="General Program">
+            <option value="CS">Computer Science</option>
+            <option value="DS">Decision Support</option>
+            <option value="IT">Information Technology</option>
+            <option value="IS">Information System</option>
+            <option value="AI">Artificial Intelligence</option>
+        </optgroup>
+        <!-- add more option groups as needed -->
+    </select><br><br>
+
+    <button type="submit" id="save-button">Save</button>
+</form>
+    <footer>
+        <p>&copy; 2023 Student Affairs</p>
+      </footer>
+      <script src="{% static 'studentaffairs_app/js/StuDepartment.js'%}"> </script>
+</body>
+
+</html>

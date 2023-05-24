@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Affairs</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+    <link rel="stylesheet" type="text/css" href="{% static 'studentaffairs_app/css/Add.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{%static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class="logo">
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/help">Help</a></li>
+        </ul>
+    </nav>
+    <h1 class="title">Add Student <img src="{%static 'studentaffairs_app/images/Add_stud.png'%}" alt width="30"
+            height="30"></h1>
+    <form id="addStudentForm">
+        {% csrf_token %}
+        <div>
+            <label>Name</label>
+            <input type="text" required placeholder="Student Name" id="name" name="student_name">
+        </div>
+        <br>
+        <div>
+            <label>ID</label>
+            <input type="text" required placeholder="Student ID" id="ID" name = "student_id">
+        </div>
+        <br>
+        <div>
+            <label>Level</label>
+            <select id="Level" name = "student_level">
+                <option value="Level 1">Level 1</option>
+                <option value="Level 2">Level 2</option>
+                <option value="Level 3">Level 3</option>
+                <option value="Level 4">Level 4</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Department</label>
+            <select id="Department" name="student_dept">
+                <option value="None">None</option>
+                <optgroup label="General Program">
+                    <option value="CS">Computer Science</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="IS">Information System</option>
+                    <option value="AI">Artifitial Intelligence</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>GPA</label>
+            <input type="number" min="0" max="4" step="0.1" placeholder="GPA" id="GPA" name="student_gpa">
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" required placeholder="email" id="Email" name="student_email">
+        </div>
+        <br>
+        <div>
+            <label>Phone no.</label>
+            <input type="tel" placeholder="Phone number" id="Phone" name="student_phone">
+        </div>
+        <br>
+        <div>
+            <label>Date of Birth</label>
+            <input type="date" id="BirthDate" name="student_birthdate">
+        </div>
+        <br>
+        <div>
+            <label>Gender</label>
+            <select id="Gender" name="student_gender">
+                <option value="Male">Male</option>
+                <option value="Female">female</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label>Status</label>
+            <select id="Status" name="student_status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <button class="button" type="submit" value="Save" id="submit">Save</button>
+        </div>
+    </form>
+    <footer>
+        <p>© 2023 Student Affairs</p>
+    </footer>
+</body>
+<script src="{%static 'studentaffairs_app/js/addStudent.js'%}"></script>
+</html>

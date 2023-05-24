@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Affairs</title>
+    <link rel="stylesheet" href="{%static 'studentaffairs_app/css/Help.css'%}">
+</head>
+
+<body>
+    <header>
+        <img src="{%static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class = logo>
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
+    </nav>
+   
+    <section class = "section1">
+            <h1 class = "title">
+                How can we help you?
+            </h1>
+    </section>
+
+    <section class = "section2">
+        <div>
+            <img src="{%static 'studentaffairs_app/images/Add_stud.png' %}" class = "photo">
+            <p class = "subtitle">Add Student</p>
+            <p class="text">If you want to add a student to the system.</p>
+            <a href="/add">Click here</a>
+        </div>
+        <div>
+            <img src="{%static 'studentaffairs_app/images/students.png' %}" class="photo">
+            <p class = "subtitle">All Student</p>
+            <p class="text">If you want to view all active/inactive students.</p>
+            <a href="/information">Click here</a>
+        </div>
+    
+        <div>
+            <img src="{%static 'studentaffairs_app/images/search.png' %}" class="photo">
+            <p class = "subtitle">Search</p>
+            <p class="text">If yow want to find any active student by his name.</p>
+            <a href="/Search">Click here</a>
+        </div>
+        <div>
+            <img src="{%static 'studentaffairs_app/images/ass_stud.png' %}" class="photo">
+            <p class = "subtitle">Student's Department Assignment</p>
+            <p class="text">If you want to assign department to student after searching, but
+                the student should be in level 3 to do this.</p>
+        </div>
+    </section>
+</body>
+<footer>
+    <p>&copy; 2023 Student Affairs</p>
+  </footer>
+</html>

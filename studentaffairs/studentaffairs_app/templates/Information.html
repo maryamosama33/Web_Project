@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs - Information</title>
+    <link rel="stylesheet" href="{%static 'studentaffairs_app/CSS/Information.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{%static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class="logo">
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/help">Help</a></li>
+        </ul>
+    </nav>
+    <h1 class="title">Student Information</h1>
+    <table  border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Level</th>
+                <th>Department</th>
+                <th>GPA</th>
+                <th>Email</th>
+                <th>Phone no.</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody id="student-list">
+        </tbody>
+    </table>
+    <footer>
+        <p>&copy; 2023 Student Affairs</p>
+    </footer>
+    <script src="{%static 'studentaffairs_app/js/information.js'%}"></script>
+</body>
+
+</html>

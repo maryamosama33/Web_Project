@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Affairs</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+    <link rel="stylesheet" href="{% static 'studentaffairs_app/CSS/Search.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{%static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class="logo">
+        <h1 class="page-name">Student Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/help">Help</a></li>
+        </ul>
+    </nav>
+    <div class="searc">
+        <h2>Search</h2>
+        <input id="search-input" type="search" placeholder="Search by name or department..." />
+        <button id="search-button" type="submit">Search <img src="{% static 'studentaffairs_app/images/search.png'%}" width="20px"
+                style="vertical-align: middle;"></button>
+    </div>
+    <br>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>GPA</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Level</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+    <footer>
+        <p>&copy; 2023 Student Affairs</p>
+    </footer>
+    <script src="{% static 'studentaffairs_app/js/search.js'%}"></script>
+</body>
+</html>

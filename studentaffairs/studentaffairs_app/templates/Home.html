@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs</title>
+    <meta name="description" content="This website can help you easily manage students information.">
+    <link rel="stylesheet" href="{% static 'studentaffairs_app/css/Home.css' %}">
+  </head>
+<body>
+  <header>
+    <img src="{%static 'studentaffairs_app/images/Home-Page2.jpg' %}" alt="" class="logo">
+    <h1 class="page-name">Student Affairs</h1>
+ </header>
+      <nav>
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
+      </nav>
+
+    <section class="parent">
+        <div class="container">
+            <h1 class="title">Welcome to Student Affairs</h1>
+            <p class="subtitle">This website can help you easily manage students information.</p>
+        </div>
+        <div class="cover-page">
+            <img src="{%static 'studentaffairs_app/images/StudentAffairs-BlogCover-2 .png' %}" alt="">
+        </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Student Affairs</p>
+    </footer>
+</body>
+</html>
